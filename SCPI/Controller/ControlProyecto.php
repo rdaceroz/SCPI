@@ -1,5 +1,5 @@
 <?php
-include '../Model/Proyecto';
+include '../Model/Proyecto.php';
 class ControlProyecto
 {
     private $codigo;
@@ -21,10 +21,14 @@ class ControlProyecto
     
     public function RegistrarProyecto()
     {
-        //$this->model->RegistrarProyecto($this->codigo, $$this->titulo, $$this->fecha, $$this->descripcion, $$this->tema);
-        echo json_encode(array('msg','Proyecto Registrado Exitosamente'));
+        $this->model->RegistrarProyecto($this->codigo, $this->titulo, $this->fecha, $this->descripcion, $this->tema);
+        $data=array('msg','Proyecto Registrado Exitosamente');
+        echo json_encode($data);
     }
 }
 
 $exec=new ControlProyecto();
 $exec->RegistrarProyecto();
+/*$user=$_REQUEST['user'];
+$data=array('id',$user);
+echo json_encode($data);*/

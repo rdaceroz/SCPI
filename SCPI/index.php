@@ -50,7 +50,7 @@ and open the template in the editor.
                 <ul class="nav navbar-nav">                    
                     <li><a href="/cepreuna/"><span class="glyphicon glyphicon-home"></span>   Inicio</a></li>
                     <!--<php if($this->Session->read('Auth.User.id')){?>-->
-                    <li><a href="#" id="mn-registrar">
+                    <li><a href="" id="mn-registrar">
                             <span class="glyphicon glyphicon-barcode"></span>   Registrar Proyecto</a></li>                    
                     
                             <li><a href="#" id="mn-asignar">

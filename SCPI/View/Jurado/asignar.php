@@ -10,38 +10,25 @@
     </div>
 
     <div class="form-group">
-        <label class="col-md-4 control-label">Codigo de Docente 1</label>
-        <div class="col-md-8"><input class="form-control" name="cdocente1" type="text" id="cdocente1"/></div>
-    </div>
+        <label class="col-md-4 control-label">Cod. Presidente</label>
+        <div class="col-md-3"><input class="form-control" name="presidente" type="text" id="presidente"/></div>
+        <div class="col-md-5" id="nombrepresidente"></div>
+    </div>    
     
     <div class="form-group">
-        <label class="col-md-4 control-label">Cargo</label>
-        <div class="col-md-8"><input class="form-control" name="cargo1" type="text" id="cargo1"/></div>
-    </div>
+        <label class="col-md-4 control-label">Cod. Vocal</label>
+        <div class="col-md-3"><input class="form-control" name="vocal" type="text" id="vocal"/></div>
+        <div class="col-md-5" id="nombrevocal"></div>
+    </div>    
     
     <div class="form-group">
-        <label class="col-md-4 control-label">Codigo de Docente 2</label>
-        <div class="col-md-8"><input class="form-control" name="cdocente2" type="text" id="cdocente2"/></div>
-    </div>
-    
-    <div class="form-group">
-        <label class="col-md-4 control-label">Cargo</label>
-        <div class="col-md-8"><input class="form-control" name="cargo2" type="text" id="cargo2"/></div>
-    </div>
-    
-    <div class="form-group">
-        <label class="col-md-4 control-label">Codigo de Docente 3</label>
-        <div class="col-md-8"><input class="form-control" name="cdocente3" type="text" id="cdocente3"/></div>
-    </div>
-    
-    <div class="form-group">
-        <label class="col-md-4 control-label">Cargo</label>
-        <div class="col-md-8"><input class="form-control" name="cargo3" type="text" id="cargo3"/></div>
+        <label class="col-md-4 control-label">Cod.Secretario</label>
+        <div class="col-md-3"><input class="form-control" name="secretario" type="text" id="secretario"/></div>
+        <div class="col-md-5" id="nombresecretario"></div>
     </div>
 
-
     <div class="form-group">
-        <div class="col-md-offset-4 col-sm-10"><input class="btn btn-primary" type="button" id="Asignar" value="Asignar"/></div>
+        <div class="col-md-offset-4 col-sm-10"><input class="btn btn-primary" type="button" id="asignar" value="Asignar"/></div>
     </div>
 </form>
 

@@ -7,7 +7,7 @@ class Conexion{
 	public function __construct()
         {	
             $this->Host  = "localhost";	
-            $this->DBase = "atlas";
+            $this->DBase = "scpi";
             $this->User  = "Wolfram";
             $this->Clave = "ju87stuka";
 
