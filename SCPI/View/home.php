@@ -1,8 +1,7 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+include 'view.php';
+$view =new View();
+//echo 'view in';
+$link='Location: //localhost/SCPI/SCPI/index.php';
+header($link);
+$view->render('//localhost/SCPI/SCPI/index.php',array('link','View/welcome.php'));

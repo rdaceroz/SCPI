@@ -8,12 +8,13 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>SCIP</title>
-        <script type="text/javascript" src="Media/js/jquery.js"></script>
-        <script type="text/javascript" src="Media/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/jquery.js"></script>
+        <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/user.js"></script>
         
-        <link rel="stylesheet" type="text/css" href="Media/css/bootstrap.min.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="Media/css/bootstrap-theme.min.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="Media/css/wolfram.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//localhost/SCPI/SCPI/Media/css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//localhost/SCPI/SCPI/Media/css/bootstrap-theme.min.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//localhost/SCPI/SCPI/Media/css/wolfram.css" media="screen">
     </head>
     <body>
         <header>
@@ -49,21 +50,23 @@ and open the template in the editor.
                 <ul class="nav navbar-nav">                    
                     <li><a href="/cepreuna/"><span class="glyphicon glyphicon-home"></span>   Inicio</a></li>
                     <!--<php if($this->Session->read('Auth.User.id')){?>-->
-                    <li><a href="/cepreuna/controls/GetRegisterPage">
+                    <li><a href="#" id="mn-registrar">
                             <span class="glyphicon glyphicon-barcode"></span>   Registrar Proyecto</a></li>                    
                     
-                    <li><a href="#">
+                            <li><a href="#" id="mn-asignar">
                             <span class="glyphicon glyphicon-cog"></span>   Asignar Jurado</a></li>
-                    <li><a href="/cepreuna/searches">
+                            <li><a href="#" id="mn-calificar">
                             <span class="glyphicon glyphicon-search"></span>   Calificacion</a>
                     </li>
-                    <li><a href="/cepreuna/users/logout">
+                    <li><a href="#" id="mn-reporte">
                             <span class="glyphicon glyphicon-share"></span>   Reportes</a></li>
-                    <li><a href="/cepreuna/users/logout">
+                            <li><a href="#" id="mn-busqueda">
                             <span class="glyphicon glyphicon-share"></span>   Busqueda</a></li>
-                    <!--<php } else if(1){ ?>-->
-                    <li><a href="/cepreuna/users/login">
+                            <li><a href="#" id="mn-salir">
                             <span class="glyphicon glyphicon-globe"></span>   Salir</a></li>
+                    <!--<php } else if(1){ ?>-->                            
+                            <li><a href="#" id="mn-ingresar">
+                            <span class="glyphicon glyphicon-globe"></span>   Ingresar</a></li>
                     <!--<php } ?>-->
                 </ul>                
             </nav>
@@ -84,13 +87,34 @@ and open the template in the editor.
             
             <!--<php echo $this->Session->flash(); ?>
             <php echo $this->fetch('content'); ?>-->
-            <?php
-            include 'Controller/ControlAcceso.php';
-            //$view = new ControlAcceso();
-            //$view->setContent('View/Acceso/login');
-            //$view->printContent();
+            <!--<php
+            
+            if(isset($link))
+            {
+                include($link);
+            }
+            else{echo 'no hay link';}
                 
-            ?>
+            ?>-->
+            
+            <form class="form-horizontal" action="" method="post" accept-charset="utf-8">
+    
+                <legend>Autenticación de Usuario</legend>                
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Usuario</label>
+                    <div class="col-md-8"><input class="form-control" name="user" maxlength="11" type="text" id="username"/></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Contraseña</label>
+                    <div class="col-md-8"><input class="form-control" name="pass" type="password" id="pass"/></div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-sm-10"><input class="btn btn-primary" id="ingresar" type="button" value="Ingresar"/></div>
+                </div>
+            </form>
+            
             
             
         </section>

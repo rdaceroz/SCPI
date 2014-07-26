@@ -1,5 +1,5 @@
 <?php
-include 'System/database.php';
+include '../System/database.php';
 class ModelUsuario extends Conexion
 {
     public function getUser()
