@@ -10,7 +10,7 @@ and open the template in the editor.
         <title>SCIP</title>
         <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/jquery.js"></script>
         <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/user.js"></script>
+        <script type="text/javascript" src="//localhost/SCPI/SCPI/Media/js/scpi.js"></script>
         
         <link rel="stylesheet" type="text/css" href="//localhost/SCPI/SCPI/Media/css/bootstrap.min.css" media="screen">
         <link rel="stylesheet" type="text/css" href="//localhost/SCPI/SCPI/Media/css/bootstrap-theme.min.css" media="screen">

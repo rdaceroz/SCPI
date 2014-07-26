@@ -15,7 +15,7 @@ $(document).ready(function()
         {
             $('#guardar').click(function()
             {
-                var info={'codigo':$('#codigo').val(),'titulo':$('#titulo').val(),
+                var info={'action':'registrar','codigo':$('#codigo').val(),'titulo':$('#titulo').val(),
                 'fecha':$('#fecha').val(),'descripcion':$('#descripcion').val(),'tema':$('#tema').val()};
                 RegistrarProyecto(info);
             });
@@ -25,6 +25,10 @@ $(document).ready(function()
     $('#mn-asignar').click(function(){
         $('#content-mid').load('View/Jurado/asignar.php',{},function()
         {
+            $('#cproyecto').blur(function()
+            {
+                GetDatosProyecto($('#cproyecto').val());
+            });
             $('#presidente').blur(function()
             {
                 //alert('presidente in');
@@ -84,6 +88,16 @@ $(document).ready(function()
             alert('success Busqueda');
             console.log(data);
             $('#nombre'+cargo).html(data[0]['nombres']+' '+data[0]['paterno']+' '+data[0]['materno']);
+        });
+    }
+    
+    function GetDatosProyecto(codigo)
+    {
+        $.getJSON("Controller/ControlProyecto.php",{'action':'buscar','codigo':codigo},function(data)
+        {
+            alert('success Busqueda');
+            console.log(data);
+            $('#nombreproyecto').html(data[0]['titulo']+' - '+data[0]['presentacion']);
         });
     }
 });

@@ -6,7 +6,7 @@ class ModelJurado extends Conexion
     {
         
         
-        $sql="SELECT nombres,paterno,materno FROM docente WHERE cod_docente='123456'";
+        $sql="SELECT nombres,paterno,materno FROM docente WHERE cod_docente='$cod_docente'";
         try {
 		$content=array();	
 		$allrecord=mysql_query($sql, $this->getconexion());
