@@ -1,27 +1,54 @@
 <?php
 class Conexion{
 	protected $enlace;
-	private $v_Host, $v_User, $v_Clave, $v_DBase;
+	private $Host, $User, $Clave, $DBase;
 	private $sql, $idQuery;
 	
-	function __construct(){	
-			$this->v_Host  = "localhost";	
-			$this->v_DBase = "atlas";
-			$this->v_User  = "Wolfram";
-			$this->v_Clave = "ju87stuka";
-		$this->enlace = mysql_pconnect($this->v_Host, $this->v_User, $this->v_Clave) or die("Error: host,user,passw .........");		
-		if (!$this->enlace){
-			die ("No conectado -- ".mysql_error());
-		}
-		$db = mysql_select_db($this->v_DBase, $this->enlace);
-		if (!$db){
-			die ("No conectado ** ".mysql_error());
-		}
+	public function __construct()
+        {	
+            $this->Host  = "localhost";	
+            $this->DBase = "atlas";
+            $this->User  = "Wolfram";
+            $this->Clave = "ju87stuka";
+
+            $this->enlace = mysql_pconnect($this->Host, $this->User, $this->Clave) or die("Error: host,user,passw .........");
+            if (!$this->enlace)
+            {
+                die ("No conectado -- ".mysql_error());
+            }
+            $db = mysql_select_db($this->DBase, $this->enlace);
+            if (!$db)
+            {
+                    die ("No conectado ** ".mysql_error());
+            }
 	}
-	public function getConexion(){
+        
+	public function getConexion()
+        {
 		return $this->enlace;
 	}
-	
-	
+        
+        public function consulta($consulta)
+        {
+            $resultado = mysql_query($consulta, $this->enlace);
+            
+            if(!$resultado)
+            {
+                echo 'MySQL Error: '.mysql_error();
+                exit;
+            }
+            return $resultado;
+        }
+        
+        public function fecth_array($consulta)
+        {
+            return mysql_fetch_array($consulta);
+        }
+        
+        public function num_rows($consulta)
+        {
+            return mysql_num_rows($consulta);
+        }
+        
 }
 ?>
