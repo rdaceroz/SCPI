@@ -1,8 +1,18 @@
-<?php
+<form class="form-horizontal" action="" method="post" accept-charset="utf-8">
+    
+    <legend>Autenticación de Usuario</legend>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Usuario</label>
+        <div class="col-md-8"><input class="form-control" name="user" maxlength="11" type="text" id="UserUsername"/></div>
+    </div>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    <div class="form-group">
+        <label class="col-md-4 control-label">Contraseña</label>
+        <div class="col-md-8"><input class="form-control" name="pass" type="password" id="UserPassword"/></div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-4 col-sm-10"><input class="btn btn-primary" type="submit" value="Ingresar"/></div>
+    </div>
+</form>
 

@@ -1,0 +1,174 @@
+body{background:#e8e8e8;color:#444;font-family:Arial;font-size:16px;}
+footer{background:#44E;color:rgba(255,255,255,0.5);padding:.3em 0; position: fixed;bottom: 0; left: 0; text-align:center;width:100%;}
+footer h3{font-size:14px;font-weight:normal;}
+footer h3 strong{display:block}
+footer h3 .mejor:before,footer h3 .mejor:after{content:" - "}
+header{background:#444;box-shadow:0 5px 0 rgba(0,0,0,0.2);color:#fff;overflow:hidden;padding:.5em;position:relative;z-index:2;}
+header .logo{border-right:1px solid #22bce0;float:left;width:60px;}
+header .logo img{width:52px}
+header .titular{margin:0 80px 0 70px;}
+header .titular .filtro{color:#22bce0;font-size:14px;font-style:italic;font-weight:bold;text-decoration:none}
+header .titular .publicar{background:#dd4f24;color:#fff;float:right;font-style:italic;padding:.2em .5em;text-decoration:none;text-shadow:1px 1px 0 #000;}
+//header .titular .publicar:before{content:"\e600";display:inline-block;font-family:"iconitos";margin:0 3px 0 0;text-shadow:none}
+header .titular .titulo{font-size:18px;font-weight:normal;margin:0;padding:0}
+header .usuario{position:absolute;right:10px;top:10px;}
+header .usuario .avatar{margin:0 1.1em 0 0;position:relative;z-index:69;}
+header .usuario .avatar img{border-radius:50%;width:50px}
+header .usuario .flechita{background:#dd4f24;color:#fff;display:block;padding:2px;position:absolute;right:0;text-align:right;text-decoration:none;top:15px;width:50%;z-index:0;}
+//header .usuario .flechita:after{content:"\e602";display:block;font-family:"iconitos";margin:1px 0 0 1px;text-shadow:1px 1px 0 #000}
+/*nav{background:#509bd0;border-left:15px solid #fff;position:relative;}
+nav:before{border-bottom:20px solid transparent;border-left:7px solid #fff;border-top:20px solid transparent;content:"";left:0;position:absolute;top:0}
+nav .menu{height:40px;line-height:40px;margin:0;padding:0;/*overflow-x:auto;white-space:nowrap;}
+/*nav .menu::-webkit-scrollbar{display:none}
+nav .menu li{display:inline-block; float: left;}
+nav .menu li a{color:lightgrey;display:block;margin:0 .5em;padding:0 .2em;text-decoration:none;}
+nav .menu li a:hover{background:rgba(0,0,0,0.1)}*/
+
+
+/******************* Estilo de Tablas del Contenedor Central ****************/
+/*#mid-container table .days-row th
+{
+    width: 14%;
+    text-align: center;
+}
+
+#mid-container table .days-row td
+{
+    width: 14%;
+    text-align: center;
+}*/
+section article {
+  border: 1px solid #8f8f8f;
+  /*border-bottom-left-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;*/
+  margin-bottom: 1.2em;
+  overflow: hidden;  
+  
+}
+section article figure {
+  background-color: #8f8f8f;
+  height: 160px;
+  width: 120px;
+}
+section article h4{
+  font-size: 18px;
+  color: #444;
+}
+section article .actions {
+  border-top: 3px solid #8f8f8f;
+  min-height: 3em;
+  padding: 0.8em;
+}
+section article .date {
+  position: relative;
+  right: 20px;
+}
+.notice .description .image{float:left;}
+.notice .description .image img{height:160px;vertical-align:top;width:125px}
+/************************* Own Style **********************/
+#messages
+{
+    position: fixed;
+    top: 120px;
+    right: 30px;
+    width: 20%;
+    /*border-width: 2px;
+    border-color: black;
+    border-style: solid;*/
+    opacity: 0.8;
+}
+
+.logform
+{
+    background:#fff;
+    border-radius:.5em .5em .5em .5em;
+    box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+    color:#7a7a7a;
+    margin-bottom:1em;
+    margin-top: 3em;
+    padding: 50px 8% 50px 8%;
+}
+
+.output-layer
+{
+    background:#fff;
+    border-radius:.5em .5em .5em .5em;
+    box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+    color:#7a7a7a;
+    margin-bottom:1em;
+    margin-top: 1em;
+    padding: 10px 5% 10px 5%;
+}
+
+.output-layer h4
+{
+    background: #5e2ff4;    
+    color:#f9d47a;
+    padding: 5px;
+    border-radius: .3em .3em .3em .3em;
+    text-align: center;
+}
+
+.input-layer
+{
+    background:#fff;
+    border-radius:.5em .5em .5em .5em;
+    box-shadow:2px 2px 10px rgba(0,0,0,0.5);
+    color:#b083fd;
+    margin-bottom:1em;
+    margin-top: 1em;
+    padding: 10px 5% 10px 5%;
+}
+
+.input-layer h4
+{
+    background: #df8e20;
+    color: #731dee;
+    padding: 5px;
+    border-radius: .3em .3em .3em .3em;
+    text-align: center;
+}
+.datacenter
+{
+    //margin-bottom:1em;
+    /*margin-top: 10px;
+    padding: 10px 15% 50px 15%;*/
+}
+#loading
+{
+    position: fixed;
+    top: 40%;
+    left: 47%;
+    z-index: 10;
+}
+
+/******************** Estilos Basados en BOOTSTRAP ************/
+.alert-reflexion
+{
+    color:#f89406;
+    background-color:#f9ffa4;
+    border-color:#f89406
+}
+
+
+
+/*@media screen and (max-width: 768px)
+{
+    #content-left .notice figure
+    {
+        display: none; 
+    }
+}*/
+
+@media screen and (max-width: 1190px)
+{
+    #content-left .notice figure
+    {
+        display: none; 
+    }
+    
+    #content-left .notice
+    {
+        padding: 10px;
+    }
+}
