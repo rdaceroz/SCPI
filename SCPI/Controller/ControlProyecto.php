@@ -1,8 +1,30 @@
 <?php
+include '../Model/Proyecto';
+class ControlProyecto
+{
+    private $codigo;
+    private $titulo;
+    private $fecha;
+    private $descripcion;
+    private $tema;
+    private $model;
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+    public function __construct() {
+        $this->codigo=$_REQUEST['codigo'];
+        $this->titulo=$_REQUEST['titulo'];
+        $this->fecha=$_REQUEST['fecha'];
+        $this->descripcion=$_REQUEST['descripcion'];
+        $this->tema=$_REQUEST['tema'];
+        $this->model=new ModelProyecto();
+    }
+    
+    public function RegistrarProyecto()
+    {
+        //$this->model->RegistrarProyecto($this->codigo, $$this->titulo, $$this->fecha, $$this->descripcion, $$this->tema);
+        echo json_encode(array('msg','Proyecto Registrado Exitosamente'));
+    }
+}
+
+$exec=new ControlProyecto();
+$exec->RegistrarProyecto();

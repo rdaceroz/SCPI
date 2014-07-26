@@ -5,6 +5,8 @@ $(document).ready(function()
         login();
     });
     
+   
+    
     $('#mn-registrar').click(function(){
         $('#content-mid').load('View/Proyecto/registrar.php');
     });
@@ -19,8 +21,7 @@ $(document).ready(function()
     });
     $('#mn-buscar').click(function(){
         $('#content-mid').load();
-    });
-    
+    });   
     
     //------------------
     
@@ -28,6 +29,17 @@ $(document).ready(function()
     {
         var info={'user':$('#username').val(),'pass':34};
         $.getJSON("Controller/ControlAcceso.php",info,function(data)
+        {
+            console.log(data);
+        });
+    }
+    
+    function RegistrarProyecto()
+    {alert('Reg proy innn');
+        var info={'codigo':$('#codigo').val(),'titulo':$('#titulo').val(),
+            'fecha':$('#fecha').val(),'descripcion':$('#descripcion').val(),'tema':$('#tema').val()};
+        
+        $.getJSON("Controller/ControlProyecto.php",info,function(data)
         {
             console.log(data);
         });
