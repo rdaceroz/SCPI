@@ -1,6 +1,7 @@
+<div class="data-layer">
 <form class="form-horizontal" method="post" accept-charset="utf-8">
     
-    <legend>Registro de Proyecto</legend>
+    <h4>Registro de Proyecto</h4>
     
     <div class="form-group">
         <label class="col-md-4 control-label">Codigo</label>
@@ -31,6 +32,7 @@
         <div class="col-md-offset-4 col-sm-10"><input class="btn btn-primary" type="button" id="guardar" value="Registrar"/></div>
     </div>
 </form>
+</div>
 
 
 

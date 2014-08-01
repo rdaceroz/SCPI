@@ -11,7 +11,7 @@ $(document).ready(function()
     $('#mn-registrar').click(function(event){
         //$('#content-mid').empty();
         event.preventDefault(); 
-        $('#content-mid').load('View/Proyecto/registrar.php',{},function()
+        $('#content-mid').load('../View/Proyecto/registrar.php',{},function()
         {
             $('#guardar').click(function()
             {
@@ -23,7 +23,7 @@ $(document).ready(function()
     });
     
     $('#mn-asignar').click(function(){
-        $('#content-mid').load('View/Jurado/asignar.php',{},function()
+        $('#content-mid').load('../View/Jurado/asignar.php',{},function()
         {
             $('#cproyecto').blur(function()
             {
@@ -50,10 +50,10 @@ $(document).ready(function()
     });
     
     $('#mn-calificar').click(function(){
-        $('#content-mid').load('View/Calificacion/calificar.php');
+        $('#content-mid').load('../View/Calificacion/calificar.php');
     });
     $('#mn-reportes').click(function(){
-        $('#content-mid').load('View/Reporte/reporte.php');
+        $('#content-mid').load('../View/Reporte/reporte.php');
     });
     $('#mn-buscar').click(function(){
         $('#content-mid').load();
@@ -64,7 +64,7 @@ $(document).ready(function()
     function login()
     {
         var info={'user':$('#username').val(),'pass':34};
-        $.getJSON("Controller/ControlAcceso.php",info,function(data)
+        $.getJSON("../Controller/ControlAcceso.php",info,function(data)
         {
             console.log(data);
         });
@@ -74,7 +74,7 @@ $(document).ready(function()
     {console.log(info);
         
         
-        $.getJSON("Controller/ControlProyecto.php",info,function(data)
+        $.getJSON("../Controller/ControlProyecto.php",info,function(data)
         {
             alert('success proyecto');
             console.log(data);
@@ -83,7 +83,7 @@ $(document).ready(function()
     
     function GetDatosDocente(codigo,cargo)
     {
-        $.getJSON("Controller/ControlJurado.php",{'codigo':codigo},function(data)
+        $.getJSON("../Controller/ControlJurado.php",{'codigo':codigo},function(data)
         {
             alert('success Busqueda');
             console.log(data);
@@ -93,7 +93,7 @@ $(document).ready(function()
     
     function GetDatosProyecto(codigo)
     {
-        $.getJSON("Controller/ControlProyecto.php",{'action':'buscar','codigo':codigo},function(data)
+        $.getJSON("../Controller/ControlProyecto.php",{'action':'buscar','codigo':codigo},function(data)
         {
             alert('success Busqueda');
             console.log(data);

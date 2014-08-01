@@ -1,6 +1,7 @@
+<div class="data-layer">
 <form class="form-horizontal" action="" method="post" accept-charset="utf-8">
     
-    <legend>Calificar un Proyecto</legend>
+    <h4>Calificar un Proyecto</h4>
     
     <div class="form-group">
         <label class="col-md-4 control-label">Codigo de Proyecto</label>
@@ -56,4 +57,4 @@
         <div class="col-md-offset-4 col-sm-10"><input class="btn btn-primary" type="button" id="calificar" value="calificar"/></div>
     </div>
 </form>
-
+</div>

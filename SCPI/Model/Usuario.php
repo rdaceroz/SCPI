@@ -2,19 +2,23 @@
 include '../System/database.php';
 class ModelUsuario extends Conexion
 {
-    public function getUser()
+    public function getUser($username,$password)
     {
+        $sql="SELECT * FROM usuario WHERE username='$username' AND password='$password'";
         try 
-	{
-            $data=array();
-            $query=mysql_query("SELECT r.nombre FROM paises AS p INNER JOIN regiones AS r ON p.id=r.pais_id 
-            WHERE p.nombre='".$this->nombre."' ", $this->getconexion());
-	
-            while ($row = mysql_fetch_array($query)) 
+	{            
+            $query=mysql_query($sql, $this->getconexion());	
+            $row = mysql_fetch_array($query);
+            $len=  mysql_num_rows($query);
+            if($len>0)
             {
-    		$data[]= $row;
+                return $row;
             }
-            return $data;
+            else
+            {
+                return array();
+            }
+            
 	}
 	catch(Exception $exc)
 	{

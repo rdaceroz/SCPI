@@ -1,5 +1,5 @@
 
-<div class="input-layer">
+<div class="data-layer">
 <form class="form-horizontal" action="" method="post" accept-charset="utf-8">
     
     <h4>Asignar Jurados a Proyecto</h4>
