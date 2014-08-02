@@ -38,6 +38,18 @@ class ControlProyecto
         $data=$this->model->GetDatosProyecto($codigo);
         echo json_encode($data);
     }
+    
+    public function AsignarJurados()
+    {
+        $codigo=$_REQUEST['codigo'];
+        $presidente=$_REQUEST['presidente'];
+        $vocal=$_REQUEST['vocal'];
+        $secretario=$_REQUEST['secretario'];
+        
+        $this->model->AsignarJurados($codigo, $presidente, $vocal, $secretario);        
+        $data=array('msg','Jurados Asignados Correctamente');
+        echo json_encode($data);
+    }
 }
 
 $exec=new ControlProyecto();
@@ -50,6 +62,10 @@ switch ($_REQUEST['action'])
     case 'buscar':
         $exec->GetDatosProyecto();
         break;
+    case 'asignar':
+        $exec->AsignarJurados();
+        break;
+        
 }
 
 
