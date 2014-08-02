@@ -8,8 +8,8 @@ class Conexion{
         {	
             $this->Host  = "localhost";	
             $this->DBase = "scpi";
-            $this->User  = "Wolfram";
-            $this->Clave = "ju87stuka";
+            $this->User  = "root";
+            $this->Clave = "";
 
             $this->enlace = mysql_pconnect($this->Host, $this->User, $this->Clave) or die("Error: host,user,passw .........");
             if (!$this->enlace)
