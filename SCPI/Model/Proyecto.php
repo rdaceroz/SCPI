@@ -60,7 +60,7 @@ class ModelProyecto extends Conexion
         try 
 	{
 			
-	mysql_query($sql, $this->getConexion());			
+            mysql_query($sql, $this->getConexion());			
 	}
             catch(Exception $exc)
 	{

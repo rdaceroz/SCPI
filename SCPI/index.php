@@ -24,7 +24,7 @@ and open the template in the editor.
     <body>
         <header>
                 <div class="logo">
-			<img src="/cepreuna/img/logo.jpg" alt="control" />
+			<img src="../Media/img/logo.png" alt="control" />
 		</div>
 		<div class="titular">
 			<h1 class="titulo">
