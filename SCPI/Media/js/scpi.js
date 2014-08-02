@@ -54,7 +54,15 @@ $(document).ready(function()
     });
     
     $('#mn-calificar').click(function(){
-        $('#content-mid').load('../View/Calificacion/calificar.php');
+        $('#content-mid').load('../View/Calificacion/calificar.php',{},function()
+        {
+            $('#buscar').click(function()
+            {
+                $('#notas').removeAttr('hidden');
+            });
+        });
+        
+        
     });
     $('#mn-reportes').click(function(){
         $('#content-mid').load('../View/Reporte/reporte.php');
@@ -87,7 +95,7 @@ $(document).ready(function()
     
     function GetDatosDocente(codigo,cargo)
     {
-        $.getJSON("../Controller/ControlJurado.php",{'codigo':codigo},function(data)
+        $.getJSON("../Controller/ControlJurado.php",{'action':'getdatosdocente','codigo':codigo},function(data)
         {
             //alert('success Busqueda');
             console.log(data);
@@ -102,6 +110,19 @@ $(document).ready(function()
             //alert('success Busqueda');
             console.log(data);
             $('#nombreproyecto').html(data[0]['titulo']+' - '+data[0]['presentacion']);
+        });
+    }
+    
+    function GetJurados(codigo)
+    {
+        $.getJSON('../Controller/ControlJurado.php',{'action':'getjurados','codigo':codigo},function(data)
+        {
+            console.log(data);
+            $('#proyecto').html();
+            $('#estudiante').html();
+            $('#presidente').html();
+            $('#vocal').html();
+            $('#secretario').html();
         });
     }
     
