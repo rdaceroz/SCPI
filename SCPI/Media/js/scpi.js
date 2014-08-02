@@ -59,6 +59,14 @@ $(document).ready(function()
             $('#buscar').click(function()
             {
                 $('#notas').removeAttr('hidden');
+                GetDatosProyecto($('#cproyecto').val());
+                GetDatosEstudiante($('#cproyecto').val());
+                GetJurados($('#cproyecto').val());
+            });
+            
+            $('#calificar').click(function()
+            {
+                SetNotas($('#cproyecto').val(),$('#notapres').val(),$('#notavoc').val(),$('#notasec').val());
             });
         });
         
@@ -103,6 +111,16 @@ $(document).ready(function()
         });
     }
     
+    function GetDatosEstudiante(codigo)
+    {
+        $.getJSON("../Controller/ControlProyecto.php",{'action':'getestudiante','codigo':codigo},function(data)
+        {
+            //alert('success Busqueda');
+            console.log(data);
+            $('#nombrestudiante').html(data[0]['nombres']+' '+data[0]['paterno']+' '+data[0]['materno']);
+        });
+    }
+    
     function GetDatosProyecto(codigo)
     {
         $.getJSON("../Controller/ControlProyecto.php",{'action':'buscar','codigo':codigo},function(data)
@@ -115,14 +133,15 @@ $(document).ready(function()
     
     function GetJurados(codigo)
     {
+        alert('in get jurados');
         $.getJSON('../Controller/ControlJurado.php',{'action':'getjurados','codigo':codigo},function(data)
         {
             console.log(data);
-            $('#proyecto').html();
-            $('#estudiante').html();
-            $('#presidente').html();
-            $('#vocal').html();
-            $('#secretario').html();
+            //$('#proyecto').html();
+            //$('#estudiante').html();
+            $('#presidente').html(data[0]['nombres']+' '+data[0]['paterno']+' '+data[0]['materno']);
+            $('#vocal').html(data[1]['nombres']+' '+data[1]['paterno']+' '+data[1]['materno']);
+            $('#secretario').html(data[2]['nombres']+' '+data[2]['paterno']+' '+data[2]['materno']);
         });
     }
     
@@ -133,6 +152,14 @@ $(document).ready(function()
         {
             alert('success Asignacion');
             console.log(data);            
+        });
+    }
+    
+    function SetNotas(codigo,notapres,notavoc,notasec)
+    {
+        $.getJSON("../Controller/ControlJurado.php",{'action':'setnotas','codigo':codigo,'notapres':notapres,'notavoc':notavoc,'notasec':notasec},function(data)
+        {
+            console.log(data);
         });
     }
 });

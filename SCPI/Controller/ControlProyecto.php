@@ -39,7 +39,14 @@ class ControlProyecto
         echo json_encode($data);
     }
     
-    public function AsignarJurados()
+    public function GetDatosEstudiante()
+    {
+        $codigo=$_REQUEST['codigo'];
+        $data=  $this->model->GetDatosEstudiante($codigo);
+        echo json_encode($data);
+    }
+
+        public function AsignarJurados()
     {
         $codigo=$_REQUEST['codigo'];
         $presidente=$_REQUEST['presidente'];
@@ -64,6 +71,9 @@ switch ($_REQUEST['action'])
         break;
     case 'asignar':
         $exec->AsignarJurados();
+        break;
+    case 'getestudiante':
+        $exec->GetDatosEstudiante();
         break;
         
 }

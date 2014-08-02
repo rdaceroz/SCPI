@@ -11,30 +11,30 @@
     <div hidden="true" id="notas">
         <div class="form-group">
             <label class="col-md-4 control-label">Proyecto</label>
-            <div class="col-md-8" id="proyecto"></div>
+            <div class="col-md-8" id="nombreproyecto"></div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label">Estudiante</label>
-            <div class="col-md-8" id="estudiante"></div>
+            <div class="col-md-8" id="nombrestudiante"></div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label">Presidente</label>
             <div class="col-md-6"><div name="presidente" id="presidente"></div></div>
-            <div class="col-md-2"><input class="form-control" name="npresidente" type="number" max="20" min="0" step="1" id="npresidente"/></div>
+            <div class="col-md-2"><input class="form-control" name="npresidente" type="number" max="20" min="0" step="1" id="notapres"/></div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label">Vocal</label>
             <div class="col-md-6"><div name="vocal" id="vocal"></div></div>
-            <div class="col-md-2"><input class="form-control" name="nvocal" type="number" max="20" min="0" step="1" id="nvocal"/></div>
+            <div class="col-md-2"><input class="form-control" name="nvocal" type="number" max="20" min="0" step="1" id="notavoc"/></div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label">Secretario</label>
             <div class="col-md-6"><div name="secretario" id="secretario"></div></div>
-            <div class="col-md-2"><input class="form-control" name="nsecretario" type="number" max="20" min="0" step="1" id="secretario"/></div>
+            <div class="col-md-2"><input class="form-control" name="nsecretario" type="number" max="20" min="0" step="1" id="notasec"/></div>
         </div>
 
         <div class="form-group">

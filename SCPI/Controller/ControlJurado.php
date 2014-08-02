@@ -19,6 +19,18 @@ class ControlJurado
     {
         $codigo=$_REQUEST['codigo'];
         $data=  $this->model->getJurados($codigo);
+        echo json_encode($data);
+    }
+    public function SetNotas()
+    {
+        $codigo=$_REQUEST['codigo'];
+        $notapres=$_REQUEST['notapres'];
+        $notavoc=$_REQUEST['notavoc'];
+        $notasec=$_REQUEST['notasec'];
+        
+        $this->model->SetNotas($codigo,$notapres, $notavoc, $notasec);
+        $data=array('msg','Notas Registradas Correctamente');
+        echo json_encode($data);
     }
 }
 
@@ -29,5 +41,8 @@ switch ($_REQUEST['action'])
         break;
     case 'getjurados':$exec->getJurados();
         break;
+    case 'setnotas':$exec->SetNotas();
+        break;
+        
 }
-$exec->getDatosDocente();
+
