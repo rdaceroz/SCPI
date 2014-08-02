@@ -32,5 +32,22 @@ class ModelProyecto extends Conexion
             echo $exc->getTraceAsString();
 	}
     }
+    
+    public function AsignarJurados($cod_proyecto,$presidente,$vocal,$secretario)
+    {
+        $sql="INSERT INTO jurado (cod_docente, cod_proyecto, cargo, nota) "
+                . "VALUES ('$presidente', '$cod_proyecto', 'Presidente', '0'), "
+                . "('$vocal', '$cod_proyecto', 'Vocal', '0'), "
+                . "('$secretario', '$cod_proyecto', 'Secretario', '0')";
+        try 
+	{
+			
+	mysql_query($sql, $this->getConexion());			
+	}
+            catch(Exception $exc)
+	{
+            echo $exc->getTraceAsString();
+	}
+    }
 }
 

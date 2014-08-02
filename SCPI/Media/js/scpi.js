@@ -46,6 +46,10 @@ $(document).ready(function()
                 //alert('presidente in');
                 GetDatosDocente($('#secretario').val(),'secretario');
             });
+            $('#asignar').click(function()
+            {
+                AsignarJurados($('#cproyecto').val(),$('#presidente').val(),$('#vocal').val(),$('#secretario').val());
+            });
         });
     });
     
@@ -85,7 +89,7 @@ $(document).ready(function()
     {
         $.getJSON("../Controller/ControlJurado.php",{'codigo':codigo},function(data)
         {
-            alert('success Busqueda');
+            //alert('success Busqueda');
             console.log(data);
             $('#nombre'+cargo).html(data[0]['nombres']+' '+data[0]['paterno']+' '+data[0]['materno']);
         });
@@ -95,9 +99,19 @@ $(document).ready(function()
     {
         $.getJSON("../Controller/ControlProyecto.php",{'action':'buscar','codigo':codigo},function(data)
         {
-            alert('success Busqueda');
+            //alert('success Busqueda');
             console.log(data);
             $('#nombreproyecto').html(data[0]['titulo']+' - '+data[0]['presentacion']);
+        });
+    }
+    
+    function AsignarJurados(cod_proyecto,presidente,vocal,secretario)
+    {
+        var info={'action':'asignar','codigo':cod_proyecto,'presidente':presidente,'vocal':vocal,'secretario':secretario};
+        $.getJSON("../Controller/ControlProyecto.php",info,function(data)
+        {
+            alert('success Asignacion');
+            console.log(data);            
         });
     }
 });
