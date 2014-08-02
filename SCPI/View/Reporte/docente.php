@@ -1,8 +1,47 @@
-<?php
+<div class="data-layer">
+    <table border="1">
+        <tr>
+            <th colspan="3">ND</th>
+        </tr>
+        <tr>
+            <td>Presidente</td>
+            <td>Vocal</td>
+            <td>Secretario</td>
+        </tr>
+    </table>
+</div>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<div class="data-layer">
+    <table border="1">
+        <tr>
+            <th colspan="3" >Presidente</th>
+        </tr>
+        <tr>
+            <td>Codigo</td>
+            <td>Proyecto</td>
+            <td>Nota</td>
+        </tr>
+    </table>
+    
+    <table border="1">
+        <tr>
+            <th colspan="3" >Vocal</th>
+        </tr>
+        <tr>
+            <td>Codigo</td>
+            <td>Proyecto</td>
+            <td>Nota</td>
+        </tr>
+    </table>
+    
+    <table border="1">
+        <tr>
+            <th colspan="3" >Secretario</th>
+        </tr>
+        <tr>
+            <td>Codigo</td>
+            <td>Proyecto</td>
+            <td>Nota</td>
+        </tr>
+    </table>
+</div>
