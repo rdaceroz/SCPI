@@ -62,19 +62,19 @@ and open the template in the editor.
                     <li><a href="/SCPI/SCPI"><span class="glyphicon glyphicon-home"></span>   Inicio</a></li>
                     <!--<php if($this->Session->read('Auth.User.id')){?>-->
                     <li><a href="" id="mn-registrar">
-                            <span class="glyphicon glyphicon-barcode"></span>   Registrar Proyecto</a></li>                    
+                            <span class="glyphicon glyphicon-hdd"></span>   Registrar Proyecto</a></li>                    
                     
                             <li><a href="#" id="mn-asignar">
-                            <span class="glyphicon glyphicon-cog"></span>   Asignar Jurado</a></li>
+                            <span class="glyphicon glyphicon-paperclip"></span>   Asignar Jurado</a></li>
                             <li><a href="#" id="mn-calificar">
-                            <span class="glyphicon glyphicon-search"></span>   Calificacion</a>
+                            <span class="glyphicon glyphicon-check"></span>   Calificacion</a>
                     </li>
                     <li><a href="#" id="mn-reporte">
-                            <span class="glyphicon glyphicon-share"></span>   Reportes</a></li>
+                            <span class="glyphicon glyphicon-book"></span>   Reportes</a></li>
                             <li><a href="#" id="mn-busqueda">
-                            <span class="glyphicon glyphicon-share"></span>   Busqueda</a></li>
+                            <span class="glyphicon glyphicon-search"></span>   Busqueda</a></li>
                             <li><a href="../Controller/ControlAcceso.php?action=logout">
-                            <span class="glyphicon glyphicon-globe"></span>   Salir</a></li>
+                            <span class="glyphicon glyphicon-share"></span>   Salir</a></li>
                     <!--<php } else if(1){ ?>-->                            
                             
                     <!--<php } ?>-->
